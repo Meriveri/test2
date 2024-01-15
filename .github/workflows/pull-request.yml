@@ -1,7 +1,6 @@
-name: pullrequest 
-
+name: pullrequest
 on: 
-  pull-request:
+  pull_request:
     branches:
       - master
 
