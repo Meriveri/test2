@@ -1,16 +1,16 @@
 name: pullrequest
 on: 
-  pull_request:
-    branches:
-      - master
+	pull_request:
+		branches:
+			- master
 
 jobs:
-  installDependances:
-    runs-on: ubuntu-latest
+	installDependances:
+		runs-on: ubuntu-latest
 
-    steps:
-     - uses: actions/checkout@v4
-     - name: installNodeJs
-      uses: actions/setup-node@v3
-      - run: npm ci 
-      - run: npm run test
+		steps:
+			- uses: actions/checkout@v4
+			- name: installNodeJs
+				uses: actions/setup-node@v3
+			- run: npm ci 
+			- run: npm run test
