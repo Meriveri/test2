@@ -5,7 +5,7 @@ on:
 			- main
 
 jobs:
-	installDependances:
+	installDependences:
 		runs-on: ubuntu-latest
 
 		steps:
