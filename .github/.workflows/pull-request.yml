@@ -1,0 +1,17 @@
+name: pull-request 
+
+on: 
+  pull-request:
+    branches:
+      - master
+
+jobs:
+  installDependances:
+    runs-on: ubuntu-latest
+
+  steps:
+    - uses: actions/checkout@v4 #get code
+    - name: installNodeJs #name step
+      uses: actions/setup-node@v# #setup nodeJS
+    - run: npm ci #install while comparing the dep versions to the package-lock file
+    - run: npm run test #run the script named test from the package.json
